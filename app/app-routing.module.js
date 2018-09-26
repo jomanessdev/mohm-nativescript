@@ -1,0 +1,29 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var router_1 = require("nativescript-angular/router");
+var home_component_1 = require("./home/home.component");
+var groups_component_1 = require("./groups/groups.component");
+var give_component_1 = require("./give/give.component");
+var about_component_1 = require("./about/about.component");
+exports.COMPONENTS = [home_component_1.HomeComponent, groups_component_1.GroupsComponent, give_component_1.GiveComponent, about_component_1.AboutComponent];
+var routes = [
+    { path: "", redirectTo: "/(homeTab:home//groupsTab:groups//giveTab:give//aboutTab:about)", pathMatch: "full" },
+    { path: "home", component: home_component_1.HomeComponent, outlet: "homeTab" },
+    { path: "groups", component: groups_component_1.GroupsComponent, outlet: "groupsTab" },
+    { path: "give", component: give_component_1.GiveComponent, outlet: "giveTab" },
+    { path: "about", component: about_component_1.AboutComponent, outlet: "aboutTab" },
+];
+var AppRoutingModule = /** @class */ (function () {
+    function AppRoutingModule() {
+    }
+    AppRoutingModule = __decorate([
+        core_1.NgModule({
+            imports: [router_1.NativeScriptRouterModule.forRoot(routes)],
+            exports: [router_1.NativeScriptRouterModule]
+        })
+    ], AppRoutingModule);
+    return AppRoutingModule;
+}());
+exports.AppRoutingModule = AppRoutingModule;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLXJvdXRpbmcubW9kdWxlLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiYXBwLXJvdXRpbmcubW9kdWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsc0NBQXlDO0FBRXpDLHNEQUF1RTtBQUV2RSx3REFBc0Q7QUFDdEQsOERBQTREO0FBQzVELHdEQUFzRDtBQUN0RCwyREFBeUQ7QUFFNUMsUUFBQSxVQUFVLEdBQUcsQ0FBQyw4QkFBYSxFQUFDLGtDQUFlLEVBQUMsOEJBQWEsRUFBQyxnQ0FBYyxDQUFDLENBQUM7QUFFdkYsSUFBTSxNQUFNLEdBQVc7SUFDbkIsRUFBRSxJQUFJLEVBQUUsRUFBRSxFQUFFLFVBQVUsRUFBRSxpRUFBaUUsRUFBRSxTQUFTLEVBQUUsTUFBTSxFQUFFO0lBRTlHLEVBQUUsSUFBSSxFQUFFLE1BQU0sRUFBRSxTQUFTLEVBQUUsOEJBQWEsRUFBRSxNQUFNLEVBQUUsU0FBUyxFQUFFO0lBQzdELEVBQUUsSUFBSSxFQUFFLFFBQVEsRUFBRSxTQUFTLEVBQUUsa0NBQWUsRUFBRSxNQUFNLEVBQUUsV0FBVyxFQUFFO0lBQ25FLEVBQUUsSUFBSSxFQUFFLE1BQU0sRUFBRSxTQUFTLEVBQUUsOEJBQWEsRUFBRSxNQUFNLEVBQUUsU0FBUyxFQUFFO0lBQzdELEVBQUUsSUFBSSxFQUFFLE9BQU8sRUFBRSxTQUFTLEVBQUUsZ0NBQWMsRUFBRSxNQUFNLEVBQUUsVUFBVSxFQUFFO0NBQ25FLENBQUM7QUFNRjtJQUFBO0lBQWdDLENBQUM7SUFBcEIsZ0JBQWdCO1FBSjVCLGVBQVEsQ0FBQztZQUNOLE9BQU8sRUFBRSxDQUFDLGlDQUF3QixDQUFDLE9BQU8sQ0FBQyxNQUFNLENBQUMsQ0FBQztZQUNuRCxPQUFPLEVBQUUsQ0FBQyxpQ0FBd0IsQ0FBQztTQUN0QyxDQUFDO09BQ1csZ0JBQWdCLENBQUk7SUFBRCx1QkFBQztDQUFBLEFBQWpDLElBQWlDO0FBQXBCLDRDQUFnQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE5nTW9kdWxlIH0gZnJvbSBcIkBhbmd1bGFyL2NvcmVcIjtcbmltcG9ydCB7IFJvdXRlcyB9IGZyb20gXCJAYW5ndWxhci9yb3V0ZXJcIjtcbmltcG9ydCB7IE5hdGl2ZVNjcmlwdFJvdXRlck1vZHVsZSB9IGZyb20gXCJuYXRpdmVzY3JpcHQtYW5ndWxhci9yb3V0ZXJcIjtcblxuaW1wb3J0IHsgSG9tZUNvbXBvbmVudCB9IGZyb20gXCIuL2hvbWUvaG9tZS5jb21wb25lbnRcIjtcbmltcG9ydCB7IEdyb3Vwc0NvbXBvbmVudCB9IGZyb20gJy4vZ3JvdXBzL2dyb3Vwcy5jb21wb25lbnQnO1xuaW1wb3J0IHsgR2l2ZUNvbXBvbmVudCB9IGZyb20gJy4vZ2l2ZS9naXZlLmNvbXBvbmVudCc7XG5pbXBvcnQgeyBBYm91dENvbXBvbmVudCB9IGZyb20gJy4vYWJvdXQvYWJvdXQuY29tcG9uZW50JztcblxuZXhwb3J0IGNvbnN0IENPTVBPTkVOVFMgPSBbSG9tZUNvbXBvbmVudCxHcm91cHNDb21wb25lbnQsR2l2ZUNvbXBvbmVudCxBYm91dENvbXBvbmVudF07XG5cbmNvbnN0IHJvdXRlczogUm91dGVzID0gW1xuICAgIHsgcGF0aDogXCJcIiwgcmVkaXJlY3RUbzogXCIvKGhvbWVUYWI6aG9tZS8vZ3JvdXBzVGFiOmdyb3Vwcy8vZ2l2ZVRhYjpnaXZlLy9hYm91dFRhYjphYm91dClcIiwgcGF0aE1hdGNoOiBcImZ1bGxcIiB9LFxuXG4gICAgeyBwYXRoOiBcImhvbWVcIiwgY29tcG9uZW50OiBIb21lQ29tcG9uZW50LCBvdXRsZXQ6IFwiaG9tZVRhYlwiIH0sXG4gICAgeyBwYXRoOiBcImdyb3Vwc1wiLCBjb21wb25lbnQ6IEdyb3Vwc0NvbXBvbmVudCwgb3V0bGV0OiBcImdyb3Vwc1RhYlwiIH0sXG4gICAgeyBwYXRoOiBcImdpdmVcIiwgY29tcG9uZW50OiBHaXZlQ29tcG9uZW50LCBvdXRsZXQ6IFwiZ2l2ZVRhYlwiIH0sXG4gICAgeyBwYXRoOiBcImFib3V0XCIsIGNvbXBvbmVudDogQWJvdXRDb21wb25lbnQsIG91dGxldDogXCJhYm91dFRhYlwiIH0sXG5dO1xuXG5ATmdNb2R1bGUoe1xuICAgIGltcG9ydHM6IFtOYXRpdmVTY3JpcHRSb3V0ZXJNb2R1bGUuZm9yUm9vdChyb3V0ZXMpXSxcbiAgICBleHBvcnRzOiBbTmF0aXZlU2NyaXB0Um91dGVyTW9kdWxlXVxufSlcbmV4cG9ydCBjbGFzcyBBcHBSb3V0aW5nTW9kdWxlIHsgfVxuIl19
